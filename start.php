@@ -9,15 +9,9 @@
 ));*/
 
 Autoloader::directories(array(
-    Bundle::path('querycache').'database',
-    Bundle::path('querycache').'models',
-    Bundle::path('querycache').'auth' . DS . 'driver',
+    Bundle::path('querycache').'Database' . DS . 'Eloquent',
 ));
 
 Autoloader::namespaces(array(
     'Querycache'   => Bundle::path('querycache'),
 ));
-
-Auth::extend('eloquentcache', function() {
-    return new EloquentCache();
-});
